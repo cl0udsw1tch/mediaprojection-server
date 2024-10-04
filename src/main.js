@@ -18,7 +18,7 @@ app.post('/upload55019283475', express.raw({ type: 'application/octet-stream', l
   console.log(imagePath)
 
     var fileCount = 0;
-  fs.readdir(directoryPath, (err, files) => {
+  fs.readdir(path.join(__dirname, "../", 'uploads'), (err, files) => {
     if (err) {
         return console.error('Unable to scan directory: ' + err);
     }
